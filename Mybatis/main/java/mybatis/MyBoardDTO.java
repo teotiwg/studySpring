@@ -5,7 +5,7 @@ public class MyBoardDTO {
 	private String id;
 	private String name;
 	private String contents;
-	//getter/setter만 생성
+	
 	public int getIdx() {
 		return idx;
 	}
@@ -30,5 +30,6 @@ public class MyBoardDTO {
 	public void setContents(String contents) {
 		this.contents = contents;
 	}
+	
 	
 }

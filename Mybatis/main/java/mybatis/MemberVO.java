@@ -1,29 +1,20 @@
 package mybatis;
 
-import java.sql.Date;
-
 /*
-VO(Value Object) : DTO와 동일한 개념으로 데이터 저장을
-	목적으로 생성하는 객체를 말한다.
-*/
+ VO(Value Oject) :
+ DTO와 동일 개념으로 데이터 저장을 목적으로 생성하는 객체
+ */
+
 public class MemberVO {
-	//멤버변수
 	private String id;
 	private String pass;
 	private String name;
 	private java.sql.Date regidate;
-	//기본생성자
-	public MemberVO() {
-	}	
-	//인자생성자
-	public MemberVO(String id, String pass, String name, Date regidate) {
+	/*
+	public void MemberVO() {
 		
-		this.id = id;
-		this.pass = pass;
-		this.name = name;
-		this.regidate = regidate;
-	}	
-	//setter/getter
+	}
+	*/
 	public String getId() {
 		return id;
 	}
@@ -48,5 +39,6 @@ public class MemberVO {
 	public void setRegidate(java.sql.Date regidate) {
 		this.regidate = regidate;
 	}
+	
 	
 }

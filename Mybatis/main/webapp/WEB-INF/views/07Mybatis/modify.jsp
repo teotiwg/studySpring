@@ -1,17 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<title>Spring 답변형 게시판</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" href="../resources/css/bootstrap.css" />
+	<script src="../resources/jquery/jquery-3.6.0.js"></script>
+	
 </head>
-<body>	
-<script type="text/javascript">
+<body>
+	<script type="text/javascript">
 function writeValidate(f)
 {
 	if(f.name.value==""){
@@ -32,11 +33,9 @@ function writeValidate(f)
 	
 	<form name="writeFrm" method="post" 
 		onsubmit="return writeValidate(this);"
-		action="<c:url value="/mybatis/modifyAction.do" />" >
-			
-	<!-- 게시물의 일련번호와 작성자ID를 hidden속성으로 삽입한다.  -->
-	<input type="hid den" name="idx" value="${dto.idx }"/>
-	<input type="hid den" name="id" value="${sessionScope.siteUserInfo.id }"/>
+		action="<c:url value="/mybatis/modifyAction.do" />" >	
+	<input type="hidden" name="idx" value="${dto.idx }"/>
+	<input type="hidden" name="id" value="${sessionScope.siteUserInfo.id }" />
 		
 	<table class="table table-bordered">
 	<colgroup>
@@ -73,9 +72,6 @@ function writeValidate(f)
 	</div>
 	</form> 
 </div>
+	
 </body>
 </html>
-
-
-
-

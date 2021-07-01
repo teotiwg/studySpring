@@ -2,18 +2,19 @@ package mybatis;
 
 import java.util.ArrayList;
 
-//파라미터 처리를 위한 DTO객체
 public class ParameterDTO {
-	private String user_id;//사용자아이디
-	private String board_idx;//게시판일련번호
-	private String searchField; 
-	/////////////////////////////////////////////////////////////
-	//private String searchTxt;//검색어(2차버전)
-	private ArrayList<String> searchTxt;//검색어(3차버전)
-	///////////////////////////////////////////////////////////
-	private int start; 	
-	private int end; 	
-	public ParameterDTO() {}
+	
+	private String user_id;
+	private String board_idx;
+	private String searchField;
+	//////////////////////////////////////////////////////
+	//private String searchTxt; // 검색어(2차버젼)
+	private ArrayList<String> searchTxt; // 검색어(3차)
+	//////////////////////////////////////////////////////
+	private int start;
+	private int end;
+	
+	
 	public String getUser_id() {
 		return user_id;
 	}
@@ -37,7 +38,15 @@ public class ParameterDTO {
 //	}
 //	public void setSearchTxt(String searchTxt) {
 //		this.searchTxt = searchTxt;
-//	}	 
+//	}
+	
+	public ArrayList<String> getSearchTxt() {
+		return searchTxt;
+	}
+	public void setSearchTxt(ArrayList<String> searchTxt) {
+		this.searchTxt = searchTxt;
+	}
+	
 	public int getStart() {
 		return start;
 	}
@@ -50,11 +59,6 @@ public class ParameterDTO {
 	public void setEnd(int end) {
 		this.end = end;
 	}
-	public ArrayList<String> getSearchTxt() {
-		return searchTxt;
-	}
-	public void setSearchTxt(ArrayList<String> searchTxt) {
-		this.searchTxt = searchTxt;
-	}
-
+	
+	
 }

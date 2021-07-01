@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../resources/css/bootstrap.css" />
+	<script src="../resources/jquery/jquery-3.6.0.js"></script>
+	
 </head>
 <body>
-<script type="text/javascript">
+	<script type="text/javascript">
 function writeValidate(f)
 {
 	if(f.name.value==""){
@@ -32,7 +31,6 @@ function writeValidate(f)
 	<h3>방명록(글쓰기) - 
 		<small>Mybatis로 제작한 방명록입니다.</small></h3>
 	
-	<!-- JSTL의 url태그는 컨텍스트루트 경로를 자동으로 포함시켜 준다. -->
 	<form name="writeFrm" method="post" 
 		onsubmit="return writeValidate(this);"
 		action="<c:url value="/mybatis/writeAction.do" />" >
@@ -73,6 +71,6 @@ function writeValidate(f)
 	</div>
 	</form> 
 </div>
-
+	
 </body>
 </html>
