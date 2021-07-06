@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*{
+	margin: 0;padding: 0;
+}
+.wrap{
+	width: 100%;
+}
+.Header, .Footer{
+	width: 100%;float: left;text-align:center;	
+}
+.Header{
+	background-color: #ABF200;height: 150px;line-height:150px;
+	font-size:2em; 
+}
+.SideBar{
+	width: 20%;height: 600px;line-height:600px;text-align:center;
+	background-color: #FFBB00;float: left;font-size:2em;
+}
+.page_content{
+	width: 80%;height: 600px;background-color: #EAEAEA;float: left;
+	padding:20px;box-sizing: border-box;
+}
+.Footer{
+	background-color: #FF00DD;
+	font-size:2em;height: 100px;line-height:100px;
+}

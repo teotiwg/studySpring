@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+	일반적인 xml파일로 생성한 후 DOCTYPE만 추가하면 된다. 
+-->
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<!--  
+	상위 <definition 태그에서 템플릿의 레이아웃으로 사용할 JSP파일을 설정
+		    <put-attribute 태그에서 각 위치의 JSP파일을 설정
+	
+	하위 <definition 태그에서 요청명의 패턴에 따른 설정을 한다. 
+	상위 태그에서의 name속성값과 하위 태그에서의 extends의 속성값이 
+	일치해야 한다.   
+-->
+<tiles-definitions>
+	<definition name="no-tiles" template="/WEB-INF/views/tiles/normal_layout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	<definition name="only/*" extends="no-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/only/{1}.jsp" />
+	</definition>
+	
+	<definition name="layout-tiles" template="/WEB-INF/views/tiles/tiles_layout.jsp">
+		<put-attribute name="top" value="/WEB-INF/views/tiles/topTemplate.jsp" />
+		<put-attribute name="left" value="/WEB-INF/views/tiles/leftTemplate.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="bottom" value="/WEB-INF/views/tiles/bottomTemplate.jsp" />
+	</definition>	
+	<definition name="*/*" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+		<put-attribute name="title" value="타일즈적용" />
+	</definition>	
+</tiles-definitions>
